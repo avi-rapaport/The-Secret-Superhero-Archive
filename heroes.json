@@ -1,0 +1,67 @@
+[
+  {
+    "id": "1",
+    "codeName": "Cyber Shield",
+    "powers": ["Phishing Detection", "Data Encryption", "Telekinesis"],
+    "threatLevel": 8,
+    "status": "active",
+    "origin": "Jerusalem",
+    "affiliations": ["VIGIL", "CTF Champions"],
+    "firstSighting": "2026-02-15T08:30:00Z",
+    "notes": "Excellent at identifying network vulnerabilities. Frequently collaborates on field missions with Agent Zisel.",
+    "createdAt": "2026-07-06T10:00:00Z",
+    "updatedAt": "2026-07-06T10:00:00Z"
+  },
+  {
+    "id": "2",
+    "codeName": "The Node",
+    "powers": ["Asynchronous Speed", "Server Manipulation"],
+    "threatLevel": 6,
+    "status": "active",
+    "origin": "Unknown",
+    "affiliations": ["VIGIL", "Backend Syndicate"],
+    "firstSighting": "2026-01-20T14:00:00Z",
+    "notes": "Handles multiple operations concurrently. Perfect for high-load CRUD missions.",
+    "createdAt": "2026-07-06T10:05:00Z",
+    "updatedAt": "2026-07-06T10:05:00Z"
+  },
+  {
+    "id": "3",
+    "codeName": "Nvidia Spark",
+    "powers": ["Market Prediction", "Technopathy", "Semiconductor Control"],
+    "threatLevel": 9,
+    "status": "retired",
+    "origin": "Silicon Valley",
+    "affiliations": ["Tech Titans", "Defense Index"],
+    "firstSighting": "2024-05-10T09:15:00Z",
+    "notes": "Retired to focus on long-term investments. Massive power reserves.",
+    "createdAt": "2026-07-06T10:10:00Z",
+    "updatedAt": "2026-07-06T10:10:00Z"
+  },
+  {
+    "id": "4",
+    "codeName": "Godot",
+    "powers": ["2D/3D Reality Alteration", "Animation Control"],
+    "threatLevel": 7,
+    "status": "missing",
+    "origin": "Cyberspace",
+    "affiliations": ["Indie Devs"],
+    "firstSighting": "2026-03-01T18:45:00Z",
+    "notes": "Disappeared while testing a new character controller physics engine. Agent Avi is investigating the disappearance.",
+    "createdAt": "2026-07-06T10:15:00Z",
+    "updatedAt": "2026-07-06T10:15:00Z"
+  },
+  {
+    "id": "5",
+    "codeName": "Dead Sea Diver",
+    "powers": ["Salt Manipulation", "Absolute Buoyancy", "Healing Waters"],
+    "threatLevel": 5,
+    "status": "active",
+    "origin": "Ein Bokek",
+    "affiliations": ["VIGIL", "Nature Wardens"],
+    "firstSighting": "2026-03-15T11:20:00Z",
+    "notes": "Highly effective in aquatic environments. Often stationed at the southern beaches.",
+    "createdAt": "2026-07-06T10:20:00Z",
+    "updatedAt": "2026-07-06T10:20:00Z"
+  }
+]
