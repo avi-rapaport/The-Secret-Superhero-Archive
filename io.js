@@ -4,7 +4,7 @@ const filePath = "heroes.json";
 
 export async function readData() {
   const data = await fs.readFile(filePath, "utf8");
-  if (!data.trim()) return {};
+  if (!data.trim()) return [];
   return JSON.parse(data);
 }
 

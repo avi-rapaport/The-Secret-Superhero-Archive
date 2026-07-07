@@ -6,7 +6,23 @@ export async function handleRoutes(req, res, parsedUrl) {
 
   if (pathParts.length === 2 && pathParts[1] === "heroes") {
     if (method === "GET") {
-      const heroes = await getHeroes();
+      const statusFilter = parsedUrl.searchParams.get("status");
+      const powerFilter = parsedUrl.searchParams.get("power");
+      const minLevelFilter = parsedUrl.searchParams.get("minLevel");
+      const maxLevelFilter = parsedUrl.searchParams.get("maxLevel");
+      const searchFilter = parsedUrl.searchParams.get("search");
+      const sortByFilter = parsedUrl.searchParams.get("sortBy");
+      const order = parsedUrl.searchParams.get("order");
+
+      const heroes = await getHeroes(
+        statusFilter,
+        powerFilter,
+        minLevelFilter,
+        maxLevelFilter,
+        searchFilter,
+        sortByFilter,
+        order,
+      );
       res.writeHead(200);
       return res.end(JSON.stringify(heroes));
     }
