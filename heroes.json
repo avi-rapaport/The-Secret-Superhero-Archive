@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "codeName": "Cyber Shield",
     "powers": ["Phishing Detection", "Data Encryption", "Telekinesis"],
     "threatLevel": 8,
@@ -13,7 +13,7 @@
     "updatedAt": "2026-07-06T10:00:00Z"
   },
   {
-    "id": "2",
+    "id": 2,
     "codeName": "The Node",
     "powers": ["Asynchronous Speed", "Server Manipulation"],
     "threatLevel": 6,
@@ -26,7 +26,7 @@
     "updatedAt": "2026-07-06T10:05:00Z"
   },
   {
-    "id": "3",
+    "id": 3,
     "codeName": "Nvidia Spark",
     "powers": ["Market Prediction", "Technopathy", "Semiconductor Control"],
     "threatLevel": 9,
@@ -39,7 +39,7 @@
     "updatedAt": "2026-07-06T10:10:00Z"
   },
   {
-    "id": "4",
+    "id": 4,
     "codeName": "Godot",
     "powers": ["2D/3D Reality Alteration", "Animation Control"],
     "threatLevel": 7,
@@ -52,7 +52,7 @@
     "updatedAt": "2026-07-06T10:15:00Z"
   },
   {
-    "id": "5",
+    "id": 5,
     "codeName": "Dead Sea Diver",
     "powers": ["Salt Manipulation", "Absolute Buoyancy", "Healing Waters"],
     "threatLevel": 5,
