@@ -45,3 +45,16 @@ export async function getHeroById(heroId) {
   const data = await readData();
   return data.find((hero) => hero.id === heroId);
 }
+
+export async function createHero(body) {
+  const heroes = await readData();
+  const hero = {
+    id: heroes.length > 0 ? heroes[heroes.length - 1].id + 1 : 1,
+    ...body,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  };
+  heroes.push(hero);
+  await saveData(heroes);
+  return hero.id;
+}

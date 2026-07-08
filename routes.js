@@ -1,4 +1,13 @@
-import { getHeroes, getHeroById } from "./service.js";
+import { getHeroes, getHeroById, createHero } from "./service.js";
+import { heroSchema } from "./hero_validations.js";
+
+async function getBodyData(req) {
+  let body = "";
+  for await (const chunk of req) {
+    body += chunk.toString();
+  }
+  return body ? JSON.parse(body) : {};
+}
 
 export async function handleRoutes(req, res, parsedUrl) {
   const method = req.method;
@@ -25,6 +34,27 @@ export async function handleRoutes(req, res, parsedUrl) {
       );
       res.writeHead(200);
       return res.end(JSON.stringify(heroes));
+    } else if (method === "POST") {
+      const body = await getBodyData(req);
+
+      const validate = heroSchema.safeParse(body);
+
+      if (!validate.success) {
+        const errorMessage = validate.error.flatten().fieldErrors;
+
+        res.writeHead(400, { "content-type": "application/json" });
+        console.log("Validation errors:", errorMessage);
+
+        return res.end(
+          JSON.stringify({ success: false, message: errorMessage }),
+        );
+      }
+
+      const newId = await createHero(validate.data);
+      res.writeHead(201);
+      return res.end(
+        JSON.stringify({ message: `hero created successfully | id: ${newId}` }),
+      );
     }
   } else if (pathParts.length === 3 && pathParts[1] === "heroes") {
     const heroId = parseInt(pathParts[2]);

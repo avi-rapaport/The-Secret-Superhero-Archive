@@ -1,6 +1,5 @@
 import http from "http";
 import { handleRoutes } from "./routes.js";
-import { error } from "console";
 
 const server = http.createServer(async (req, res) => {
   res.setHeader("content-type", "application/json");
